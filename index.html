@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armando Felipe | Diretor de Departamento & Gestão Pública</title>
+    <style>
+        /* ==========================================================================
+           1. CONFIGURAÇÕES GERAIS E PALETA DE CORES (Edite as cores aqui se quiser)
+           ========================================================================== */
+        :root {
+            --cor-primaria: #0f4c81;     /* Azul clássico, transmite autoridade e serviço público */
+            --cor-escura: #1a252f;       /* Grafite escuro para textos e seções elegantes */
+            --cor-clara: #f4f6f9;        /* Fundo claro moderno para contraste */
+            --cor-branca: #ffffff;
+            --cor-texto-suave: #5a6b7c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--cor-escura);
+            background-color: var(--cor-branca);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==========================================================================
+           2. CABEÇALHO (MENU)
+           ========================================================================== */
+        header {
+            background-color: var(--cor-branca);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--cor-primaria);
+            letter-spacing: 0.5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--cor-escura);
+            font-weight: 600;
+            margin-left: 25px;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--cor-primaria);
+        }
+
+        /* ==========================================================================
+           3. SEÇÃO PRINCIPAL (HERO)
+           ========================================================================== */
+        .hero {
+            padding: 170px 0 100px 0;
+            background: linear-gradient(135deg, #f4f6f9 0%, #e9edf4 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--cor-escura);
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--cor-texto-suave);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: var(--cor-primaria);
+            color: var(--cor-branca);
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(15, 76, 129, 0.2);
+        }
+
+        .btn-principal:hover {
+            background-color: #0b375e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(15, 76, 129, 0.3);
+        }
+
+        /* ==========================================================================
+           4. SEÇÃO SOBRE MIM
+           ========================================================================== */
+        .secao {
+            padding: 90px 0;
+        }
+
+        .titulo-secao {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+            color: var(--cor-escura);
+            font-weight: 700;
+        }
+
+        .titulo-secao::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--cor-primaria);
+            margin: 12px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .sobre-conteudo {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.15rem;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        /* ==========================================================================
+           5. SEÇÃO TRAJETÓRIA (CARDS PROFISSIONAIS)
+           ========================================================================== */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-cards { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.4rem; }
+        }
+
+        .card {
+            background-color: var(--cor-branca);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.01);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-color: #cbd5e1;
+        }
+
+        .card h3 {
+            color: var(--cor-primaria);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .card .subtitulo {
+            font-weight: 600;
+            color: var(--cor-escura);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .card p {
+            color: var(--cor-texto-suave);
+            font-size: 1rem;
+        }
+
+        /* ==========================================================================
+           6. RODAPÉ E CONTATO
+           ========================================================================== */
+        footer {
+            background-color: var(--cor-escura);
+            color: var(--cor-branca);
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        footer p {
+            margin-bottom: 25px;
+            font-size: 1rem;
+            color: #a0aec0;
+        }
+
+        .links-sociais a {
+            display: inline-block;
+            color: var(--cor-branca);
+            background-color: #2d3748;
+            padding: 12px 28px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .links-sociais a:hover {
+            background-color: var(--cor-primaria);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">Armando Felipe</div>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#trajetoria">Trajetória</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Armando Felipe</h1>
+            <p>Diretor de Departamento no SAAEJ Jardim | Gestão Estratégica & Desenvolvimento Acadêmico na UNINOVE</p>
+            <a href="#contato" class="btn-principal">Conectar Profissionalmente</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="secao">
+        <div class="container">
+            <h2 class="titulo-secao">Sobre Mim</h2>
+            <div class="sobre-conteudo">
+                <p>
+                    Sou o Armando Felipe, profissional focado em liderança, otimização de processos e gestão pública, baseado no Ceará, Brasil. Atualmente, desempenho o papel estratégico de Diretor de Departamento no SAAEJ em Jardim, liderando frentes operacionais e administrativas com o compromisso de entregar serviços públicos eficientes e de alto valor para a sociedade. Em paralelo, sigo consolidando minha sólida base analítica e gerencial por meio da UNINOVE, unindo teoria avançada à prática diária da gestão.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trajetoria" class="secao" style="background-color: var(--cor-clara);">
+        <div class="container">
+            <h2 class="titulo-secao">Experiência & Formação</h2>
+            
+            <div class="grid-cards">
+                
+                <div class="card">
+                    <h3>Diretor de Departamento</h3>
+                    <div class="subtitulo">SAAEJ - Jardim (Ceará, Brasil)</div>
+                    <p>Liderança direta na gestão do departamento técnico e administrativo, coordenação de equipes operacionais, fiscalização e planejamento estratégico voltado à infraestrutura de abastecimento e serviços essenciais do município de Jardim.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Formação Acadêmica</h3>
+                    <div class="subtitulo">UNINOVE (Universidade Nove de Julho)</div>
+                    <p>Desenvolvimento contínuo de competências avançadas em planejamento corporativo, governança, soluções de problemas complexos e inteligência de mercado estruturado pelo ensino de excelência.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container">
+            <p>Gostaria de trocar ideias sobre projetos, gestão pública ou networking? Entre em contato!</p>
+            <div class="links-sociais">
+                <a href="https://www.linkedin.com/in/armando-felipe-4b6289116" target="_blank">Meu LinkedIn</a>
+                
+                <a href="mailto:seu-email@email.com">Enviar E-mail</a>
+            </div>
+            <p style="margin-top: 35px; font-size: 0.85rem; color: #718096;">&copy; 2026 Armando Felipe. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
