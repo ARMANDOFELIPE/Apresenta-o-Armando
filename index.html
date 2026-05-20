@@ -14,6 +14,7 @@
             --cor-clara: #f4f6f9;        /* Fundo claro moderno para contraste */
             --cor-branca: #ffffff;
             --cor-texto-suave: #5a6b7c;
+            --cor-sucesso: #10b981;      /* Verde para destacar formação concluída */
         }
 
         * {
@@ -120,6 +121,18 @@
             color: var(--cor-texto-suave);
             margin-bottom: 30px;
             max-width: 700px;
+        }
+
+        .badge-formado {
+            display: inline-block;
+            background-color: var(--cor-sucesso);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
         }
 
         .btn-principal {
@@ -240,11 +253,19 @@
             border-color: #cbd5e1;
         }
 
+        .card.formado {
+            border-left: 4px solid var(--cor-sucesso);
+        }
+
         .card h3 {
             color: var(--cor-primaria);
             font-size: 1.4rem;
             margin-bottom: 8px;
             font-weight: 700;
+        }
+
+        .card.formado h3 {
+            color: var(--cor-sucesso);
         }
 
         .card .subtitulo {
@@ -285,6 +306,10 @@
             left: 0;
             color: var(--cor-primaria);
             font-weight: bold;
+        }
+
+        .card.formado ul li::before {
+            color: var(--cor-sucesso);
         }
 
         /* ==========================================================================
@@ -400,8 +425,9 @@
                     <img src="https://avatars.githubusercontent.com/u/286111169?v=4" alt="Armando Felipe">
                 </div>
                 <div class="hero-texto">
+                    <div class="badge-formado">✓ FORMADO EM ADMINISTRAÇÃO</div>
                     <h1>Armando Felipe</h1>
-                    <p>Administrador | Gestor Público & Diretor de Departamento</p>
+                    <p>Bacharel em Administração | Gestor Público & Diretor de Departamento</p>
                     <p style="font-size: 1rem; color: #5a6b7c;">Ceará, Brasil | 28 Anos</p>
                     <a href="#contato" class="btn-principal">Conectar Profissionalmente</a>
                 </div>
@@ -417,7 +443,7 @@
                     Sou um profissional dedicado com sólida experiência em funções administrativas e operacionais, abrangendo Atendimento ao Cliente, Logística, Controle de Estoque, Contas a Pagar/Receber e Suporte Administrativo. 
                 </p>
                 <p style="margin-top: 20px;">
-                    Possuo comprovada atuação em ambientes multifuncionais (Setor Público, Alimentício e Serviços), com foco em segurança operacional e excelente relacionamento com clientes. Atualmente, curso o 8º semestre de Bacharelado em Administração na UNINOVE, buscando aplicar conhecimentos em gestão, estratégias de marketing e recursos humanos.
+                    Possuo comprovada atuação em ambientes multifuncionais (Setor Público, Alimentício e Serviços), com foco em segurança operacional e excelente relacionamento com clientes. Sou <strong>Bacharel em Administração</strong> pela UNINOVE, com competências sólidas em gestão, estratégias de marketing e recursos humanos.
                 </p>
                 
                 <div class="info-pessoal">
@@ -485,12 +511,12 @@
                     </ul>
                 </div>
 
-                <div class="card">
-                    <h3>Formação Acadêmica</h3>
-                    <div class="subtitulo">Bacharelado em Administração</div>
-                    <div class="periodo">Conclusão: 2026</div>
-                    <p><strong>Universidade Nove de Julho (UNINOVE)</strong></p>
-                    <p style="margin-top: 12px; font-size: 0.95rem;">Desenvolvimento de competências em planejamento corporativo, governança, gestão de projetos, estratégias de marketing e soluções de problemas complexos.</p>
+                <div class="card formado">
+                    <h3>Bacharelado em Administração ✓</h3>
+                    <div class="subtitulo">Universidade Nove de Julho (UNINOVE)</div>
+                    <div class="periodo">Formação Concluída: 2026</div>
+                    <p><strong style="color: var(--cor-sucesso);">Bacharel em Administração</strong></p>
+                    <p style="margin-top: 12px; font-size: 0.95rem;">Desenvolvimento completo de competências em planejamento corporativo, governança, gestão de projetos, estratégias de marketing e soluções de problemas complexos.</p>
                 </div>
 
             </div>
