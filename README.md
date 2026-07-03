@@ -1,7 +1,5 @@
 # Armando Felipe - Portfólio Profissional
 
-![Armando Felipe](https://raw.githubusercontent.com/ARMANDOFELIPE/Apresenta-o-Armando/main/assets/img/foto-armando.webp)
-
 Portfólio online de **Armando Felipe**, Diretor de Departamento no SAAEJ Jardim e estudante de Gestão na UNINOVE.
 
 ## 📱 Acesse seu site
